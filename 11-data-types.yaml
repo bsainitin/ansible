@@ -1,7 +1,7 @@
 - name: data types
   hosts: local
   connection: local
-  var:
+  vars:
     Course: Devops with aws
     Duration: 120
     is_live: true
