@@ -5,6 +5,7 @@
     technologies: Linux, Devops, Shell, Ansible
     name: Sai Nitin b
     gmail: Nitin@GMAIL.com
+    ip-address: "192.943.453.670" #Max IP-v4 Address 255.255.255.255 
 
     tags:
       Application: payment
@@ -52,3 +53,7 @@
     - name: convert to lowercase
       ansible.builtin.debug:
         msg: "Gmail: {{ gmail | lower }}"
+
+    - name: check IP Address valid or not
+      ansible.builtin.debug:
+        msg: "{{ ip-address | ansible.utils.ipv4 }}"
