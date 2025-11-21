@@ -3,6 +3,8 @@
   connection: local
   vars:
     technologies: Linux, Devops, Shell, Ansible
+    name: Sai Nitin b
+    gmail: Nitin@GMAIL.com
 
     tags:
       Application: payment
@@ -42,3 +44,11 @@
       ansible.builtin.copy:
         dest: ./student-data.json
         content: "{{ student_yaml | to_nice_json }}"
+
+    - name: convert to  uppercase
+      ansible.builtin.debug:
+        msg: "Name: {{ name | upper }}"
+    
+    - name: convert to lowercase
+      ansible.builtin.debug:
+        msg: "Gmail: {{ gmail | lower }}"
